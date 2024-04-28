@@ -78,24 +78,24 @@ body {
   margin-left: 5px;
 }
 .header-link .active {
-  border-bottom: 2px solid #ff5e86;
+  border-bottom: 2px solid #8682e8;
 }
 .header-link .active a {
-  color: #ff5e86;
+  color: #8682e8;
 }
 
 .header-info-link .info-list-link .active a {
-  color: #ff5e86;
+  color: #8682e8;
 }
 .mobile-header-link {
   display: none;
 }
 
 .header-link li:hover {
-  border-bottom: 2px solid #8654c0;
+  border-bottom: 2px solid #8854c0;
 }
 .header-link li:hover a {
-  color: #8654c0;
+  color: #8854c0;
 }
 
 .header-link a {
@@ -136,10 +136,10 @@ body {
 
 .header .create-quiz {
   background-color: #e9e9e9;
-  color: #ff5e86;
+  color: #8682e8;
 }
 .header .create-quiz:hover {
-  background-color: #ff5e86;
+  background-color: #8682e8;
   color: #fff;
 }
 

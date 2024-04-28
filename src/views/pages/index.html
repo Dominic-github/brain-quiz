@@ -13,149 +13,110 @@
     <script src="/js/component/function.js"></script>
     <title>Login</title>
   </head>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      font-family: 'Jost', sans-serif;
-      background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-    }
-    .main {
-      width: 350px;
-      height: 500px;
-      background: red;
-      overflow: hidden;
-      background: url('/assets/images/logo/abstract-realistic-technology-particle-background_23-2148414765.avif')
-        no-repeat center/ cover;
-      border-radius: 10px;
-      box-shadow: 5px 20px 50px #000;
-    }
-    #chk {
-      display: none;
-    }
-    .signup {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    label {
-      color: #fff;
-      font-size: 2.3em;
-      justify-content: center;
-      display: flex;
-      margin: 60px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.5s ease-in-out;
-    }
-    input {
-      width: 60%;
-      justify-content: center;
-      display: flex;
-      margin: 20px auto;
-      padding: 10px;
-      border: none;
-      outline: none;
-      border-radius: 5px;
-    }
-    button {
-      width: 60%;
-      height: 40px;
-      margin: 10px auto;
-      justify-content: center;
-      display: block;
-      color: #fff;
-      background: #573b8a;
-      font-size: 1em;
-      font-weight: bold;
-      margin-top: 20px;
-      outline: none;
-      border: none;
-      border-radius: 5px;
-      transition: 0.2s ease-in;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #6d44b8;
-    }
-    .login {
-      height: 460px;
-      background: #eee;
-      border-radius: 60% / 10%;
-      transform: translateY(-180px);
-      transition: 0.8s ease-in-out;
-    }
-    .login label {
-      color: #573b8a;
-      transform: scale(0.6);
-    }
 
-    #chk:checked ~ .login {
-      transform: translateY(-500px);
-    }
-    #chk:checked ~ .login label {
-      transform: scale(1);
-    }
-    #chk:checked ~ .signup label {
-      transform: scale(0.6);
-    }
-  </style>
   <body>
-    <div class="main">
-      <input type="checkbox" id="chk" aria-hidden="true" />
-
-      <div class="signup">
+    <div class="container" id="container">
+      <div class="form-container sign-up">
         <form action="/api/create-user" method="POST">
-          <label for="chk" aria-hidden="true">Sign up</label>
+          <h1>Create Account</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+          <span>or use your email for registeration</span>
           <input
-            class="signup_name"
             type="text"
             name="name"
-            placeholder="User name"
-            required=""
+            class="signup_name"
+            placeholder="Full Name"
+            required
           />
           <input
-            class="signup_email"
             type="email"
             name="email"
+            class="signup_email"
             placeholder="Email"
-            required=""
+            required
           />
           <input
-            class="signup_password"
             type="password"
             name="password"
+            class="signup_password"
             placeholder="Password"
-            required=""
+            required
           />
-          <button type="submit" class="sign_button">Sign up</button>
+          <button class="btn" id="signup_btn">Sign Up</button>
+          <p class="footer_text">
+            Already have account?
+            <button type="button" id="login" class="sign_button">
+              Sign In
+            </button>
+          </p>
         </form>
       </div>
-
-      <div class="login">
+      <div class="form-container sign-in">
         <form action="/api/login" method="POST">
-          <label for="chk" aria-hidden="true">Login</label>
+          <h1>Sign In</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+          <span>or use your email password</span>
           <input
-            class="signin_email"
             type="email"
             name="email"
+            class="signin_email"
             placeholder="Email"
-            required=""
+            required
           />
           <input
-            class="signin_password"
             type="password"
             name="password"
+            class="signin_password"
             placeholder="Password"
-            required=""
+            required
           />
-          <button type="submit" class="sign_button">Login</button>
+          <a href="#">Forget Your Password?</a>
+          <button class="btn" id="signin_btn">Sign In</button>
+          <p class="footer_text">
+            Don't have account?
+            <button type="button" id="register" class="sign_button">
+              Sign Up
+            </button>
+          </p>
         </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome Back!</h1>
+            <p>Enter your personal details to use all of site features</p>
+            <button class="btn" id="login">Sign In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Hello, Friend!</h1>
+            <p>
+              Register with your personal details to use all of site features
+            </p>
+            <button class="btn" id="register">Sign Up</button>
+          </div>
+        </div>
       </div>
     </div>
+
+    <script src="/library/sweetalert/sweetalert2.all.min.js"></script>
+    <script src="/js/pages/index.js"></script>
   </body>
 </html>
