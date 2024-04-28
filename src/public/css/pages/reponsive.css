@@ -1,0 +1,84 @@
+@media only screen and (min-width: 601px) and (max-width: 820px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .container .form-container {
+    width: 100%;
+  }
+
+  .form-container {
+    transition: all 1s ease-in-out;
+  }
+
+  .container.active .sign-in {
+    transform: translateX(0%);
+    transform: translateY(120%);
+  }
+  .container.active .sign-up {
+    opacity: 1;
+    transform: translateX(0%);
+    transform: translateY(0%);
+    animation: move 1s;
+  }
+
+  .toggle-container {
+    display: none;
+    z-index: 0;
+  }
+
+  @keyframes move {
+    0% {
+      opacity: 0;
+      z-index: 5;
+    }
+    10% {
+      opacity: 0.1;
+      z-index: 5;
+    }
+    20% {
+      opacity: 0.2;
+      z-index: 5;
+    }
+    30% {
+      opacity: 0.3;
+      z-index: 5;
+    }
+    40% {
+      opacity: 0.4;
+      z-index: 5;
+    }
+    50% {
+      opacity: 0.5;
+      z-index: 5;
+    }
+    60% {
+      opacity: 0.6;
+      z-index: 5;
+    }
+    70% {
+      opacity: 0.7;
+      z-index: 5;
+    }
+    80% {
+      opacity: 0.8;
+      z-index: 5;
+    }
+    90% {
+      opacity: 0.9;
+      z-index: 5;
+    }
+    100% {
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+}

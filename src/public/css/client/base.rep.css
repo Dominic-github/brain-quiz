@@ -1,0 +1,50 @@
+@media only screen and (max-width: 800px) {
+  /* header */
+  .header-container {
+    padding: 0 10px;
+  }
+  .header-container .header-left .header-link li a span {
+    display: none;
+  }
+  .mobile-header-link {
+    display: block;
+  }
+  .header-container .header-left .search-container {
+    width: 200px;
+  }
+  .header-link {
+    display: none;
+  }
+
+  .header .create-quiz {
+    display: none;
+  }
+
+  /* footer */
+  .footer .footer-container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .footer .copyright {
+    margin-bottom: 10px;
+  }
+  .footer .footer-link-lable {
+    font-size: 16px;
+  }
+  .footer .footer-link-content {
+    display: flex;
+    margin-left: 10px;
+  }
+  .footer-link-content img {
+    width: 80px;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+}

@@ -1,0 +1,114 @@
+/* main */
+
+main {
+  background-color: #f9f9f9;
+}
+.main-container {
+  width: 100%;
+  max-width: 1366px;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden auto;
+  padding: 100px 12px 12px;
+}
+
+.main .create-quiz-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.main .create-quiz-group .btn-primary {
+  margin-left: 8px;
+}
+
+.main .btn-cancel {
+  background-color: #f9f9f9;
+}
+
+.main .div-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.main .div-group .div-group-title {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.main .div-group .div-group-input {
+  width: 100%;
+}
+
+.main .quess-group .quess-group-title {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.main .quess-group {
+  padding-top: 20px;
+  border-top: 2px solid #8682e8;
+}
+
+.main .choice-group-label {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.main .answer-group-label {
+  margin-bottom: 8px;
+}
+.main .score-group-label {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.main .choice-group {
+  padding: 0 20px;
+}
+
+.main .score-group {
+  padding: 0 20px;
+}
+
+.main .quess-group-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.main .answer-group {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.main .score-group {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.main .form-check-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main .form-check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main .form-check-container .form-check-label {
+  margin-top: 5px;
+  margin-left: 8px;
+}
+
+.main .div-group .choice-group-answer {
+  padding: 0;
+}

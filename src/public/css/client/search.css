@@ -1,0 +1,111 @@
+/* main */
+
+main {
+  background-color: #f9f9f9;
+}
+.main-container {
+  width: 100%;
+  max-width: 1366px;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden auto;
+  padding: 100px 12px 12px;
+}
+
+.main-container .main-container-content {
+  margin-bottom: 20px;
+  padding-top: 12px;
+}
+.main-container-content .quiz-header {
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.quiz-see-more {
+  background-color: #e9e9e9;
+  color: #8682e8;
+  margin-right: 20px;
+}
+.quiz-see-more:hover {
+  background-color: #8682e8;
+  color: #fff;
+}
+
+.main-container-content .quiz-header .quiz-header-text {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.main .quiz-container .quiz-container-list {
+  flex-wrap: wrap;
+  font-weight: 500;
+  display: flex;
+}
+
+.main .quiz-container .quiz-item {
+  width: calc(20% - 16px);
+  margin-bottom: 16px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #0000000d, 0 3px 6px 1px #0000000d;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  height: 204px;
+  margin-right: 16px;
+}
+
+.main .quiz-container .quiz-item:hover {
+  box-shadow: 0 0 0 1px #0000000d, -4px 6px 8px 4px #0000000d,
+    4px 6px 8px 4px #0000000d;
+}
+
+.main .quiz-container .quiz-item:last-child {
+  margin-right: 0px;
+}
+
+.main .quiz-container .quiz-item-link {
+  display: block;
+  height: 100%;
+}
+
+.main .quiz-container .quiz-item .quiz-img {
+  width: 100%;
+  height: 120px;
+  background-color: #f2f2f2;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.main .quiz-container .quiz-name {
+  text-align: left;
+  color: #292a3a;
+  margin: 12px 12px 0;
+  font-size: 16px;
+}
+
+.main .quiz-container .quiz-info {
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 102px;
+}
+.main .quiz-container .quiz-info span {
+  font-size: 12px;
+  background: #f2f2f2;
+  border-radius: 4px;
+  padding: 1px 6px;
+  box-shadow: 0 0 0 1px #0000001a;
+  color: #292a3aa8;
+}
+.main .quiz-container .quiz-info .questions-length {
+  margin-left: 10px;
+}
+.main .quiz-container .quiz-info .times-played {
+  margin-right: 10px;
+}

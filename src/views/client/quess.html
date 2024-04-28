@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/library/fontawesome-free/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="/library/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/css/client/base.css" />
+    <link rel="stylesheet" href="/css/client/base.rep.css" />
+    <link rel="stylesheet" href="/css/global/global.css" />
+
+    <link rel="stylesheet" href="/css/client/quess.css" />
+    <link rel="stylesheet" href="/css/client/quess.rep.css" />
+
+    <script src="/library/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/library/jquery/jquery.min.js"></script>
+    <script src="/js/component/function.js"></script>
+    <script src="/js/component/checkuser.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brain</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-left">
+          <div class="header-logo">
+            <a href="/">
+              <img
+                class="header-logo-img"
+                src="/assets/images/logo/brain-2.png"
+                alt="Logo"
+              />
+            </a>
+          </div>
+          <form class="search-container">
+            <input type="" class="search-input" placeholder="Find a quiz" />
+            <i class="fas fa-search"></i>
+          </form>
+          <ul class="header-link">
+            <li class="active">
+              <a href="/">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="/activity">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Activity</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-right">
+          <div class="header-create-quiz">
+            <a href="/createquiz" class="btn create-quiz">
+              <i class="fa-solid fa-circle-plus"></i>
+              Create a quiz
+            </a>
+          </div>
+          <div class="header-info">
+            <div class="header-info-icon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="header-info-link hidden">
+              <ul class="info-detail">
+                <li class="info-username">Username</li>
+                <li class="info-email">admin@gmail.com</li>
+              </ul>
+
+              <ul class="info-list-link">
+                <div class="mobile-header-link">
+                  <li class="active">
+                    <a href="/">
+                      <i class="fa-solid fa-house"></i>
+                      <span>Home</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/activity">
+                      <i class="fa-solid fa-clock-rotate-left"></i>
+                      <span>Activity</span>
+                    </a>
+                  </li>
+                </div>
+
+                <li>
+                  <a href="/user/setting">
+                    <i class="fa-solid fa-gear"></i>
+                    Setting</a
+                  >
+                </li>
+                <li>
+                  <a href="/logout"
+                    ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main-container">
+        <!-- Question Section -->
+        <section class="question-section">
+          <div class="question-container glass">
+            <div class="question-header">
+              <div class="time-container">
+                <div class="time">
+                  <span class="time-count"> 30</span> seconds Left
+                </div>
+              </div>
+              <div class="user-score">
+                <p><span class="score"> 10</span> points</p>
+              </div>
+            </div>
+            <div class="timeline"></div>
+            <div class="question-center">
+              <h2 class="question-text"></h2>
+              <div class="question-options"></div>
+              <div class="answer-description"></div>
+            </div>
+
+            <div class="question-type">
+              <p class="question-answer-text hidden">answer: true-false</p>
+              <p class="question-type-text">type: true-false</p>
+            </div>
+
+            <div class="question-footer">
+              <div class="question-left">
+                <div class="question-progress-container">
+                  <div class="question-progress"></div>
+                </div>
+                <div class="question-progress-text"></div>
+              </div>
+              <div class="question-action">
+                <button class="next-question btn">Next Question</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Result Section -->
+        <section class="result-section">
+          <div class="result-box glass">
+            <h2 class="result-expression">Congratulations!!!!</h2>
+            <p class="result-text">You Scored 60 Points</p>
+            <p class="result-feedback">
+              <span class="feedback"></span>
+            </p>
+            <div class="result-actions">
+              <button class="restart btn">Restart Quiz</button>
+              <button class="back-to-home btn">Back to Home</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Canvas || Confetti -->
+        <canvas id="my-canvas"></canvas>
+
+        <!-- loading section -->
+        <section class="loading-container">
+          <h2 class="loading-text">Loading...</h2>
+          <div class="loading-line-box">
+            <div class="line"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p class="copyright">@Dominic. All Rights Reserved</p>
+        </div>
+
+        <div class="footer-right">
+          <p class="footer-link-lable">Get our app</p>
+          <div class="footer-link-content">
+            <a href="#">
+              <img
+                src="/assets/images/icon/apple-app-store.png"
+                alt=""
+                srcset=""
+              />
+            </a>
+            <a href="#">
+              <img src="/assets/images/icon/google-play.png" alt="" srcset="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/component/confetti.min.js"></script>
+    <script src="/js/component/syncData.js"></script>
+    <script src="/js/component/syncQuess.js"></script>
+
+    <script src="/js/client/base.js"></script>
+    <script src="/js/client/quess.js"></script>
+  </body>
+</html>
